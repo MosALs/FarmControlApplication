@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "112545245160",
+    "firebase_url": "https://myfarm-cd265.firebaseio.com",
+    "project_id": "myfarm-cd265",
+    "storage_bucket": "myfarm-cd265.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112545245160:android:f20bd26bd6388fc5f7e65d",
+        "android_client_info": {
+          "package_name": "com.example.farmcontrolapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112545245160-239r6r810crrlqolkfnfkm8jqmkmgvpa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.farmcontrolapplication",
+            "certificate_hash": "4008db554ebcc68fdc99da8da04ccfa823cc46ae"
+          }
+        },
+        {
+          "client_id": "112545245160-pl3j8uanb5nnaf8674eqt83l917juejo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXh5b2s4YOjqbyVUB9Fc5-2lbzQFdKC-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112545245160-pl3j8uanb5nnaf8674eqt83l917juejo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

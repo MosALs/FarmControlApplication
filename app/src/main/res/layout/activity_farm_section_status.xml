@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".FarmSectionStatus">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/section_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10sp"
+                android:text="Section Number"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="@android:color/black"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensors Map In order From left To Right"
+                android:textColor="#A70477"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:columnCount="3"
+                    android:rowCount="3">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@drawable/liquid_sensor"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/temperature_image_id"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@color/cardview_light_background"
+                        android:textStyle="bold"></ImageView>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@drawable/liquid_sensor"
+                        android:textStyle="bold"></ImageView>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@color/cardview_light_background"></ImageView>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@drawable/liquid_sensor"></ImageView>
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@color/cardview_light_background"></ImageView>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@drawable/liquid_sensor"></ImageView>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@color/cardview_light_background"></ImageView>
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginRight="16sp"
+                        android:layout_marginBottom="16sp"
+                        android:background="@drawable/liquid_sensor"></ImageView>
+
+
+                </GridLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="600sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30sp"
+            android:layout_weight="10"
+            app:cardCornerRadius="12sp">
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="600sp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:padding="6dp"
+                android:rowCount="3">
+
+
+                <!--    row 1    -->
+
+                <!--   column 1     -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_marginBottom="16sp"
+                    app:cardCornerRadius="18sp"
+                    app:cardElevation="18sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#4F11CA"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Sensor one"
+                            android:textColor="#FAF7F7"
+                            android:textSize="20dp"
+                            android:textStyle="bold|italic"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Reading "
+                            android:textColor="#FDFDFD"
+                            android:textSize="14dp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <com.eralp.circleprogressview.CircleProgressView
+                            android:id="@+id/sensor_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="6"
+                            android:background="#9060E0"
+
+
+                            android:keepScreenOn="false"
+                            android:longClickable="false"
+
+                            android:textAlignment="center"
+                            app:cpv_autoTextColor="false"
+                            app:cpv_autoTextSize="false"
+                            app:cpv_background_circle_color="#5b253048"
+                            app:cpv_background_circle_width="30dp"
+                            app:cpv_barColor="#9DE6C7"
+
+                            app:cpv_barWidth="30dp"
+                            app:cpv_blockCount="10"
+                            app:cpv_circle_color="#B8FFF7"
+                            app:cpv_circle_width="20dp"
+                            app:cpv_fillColor="#8C59EB"
+                            app:cpv_rimColor="#DDDBDB"
+                            app:cpv_rimWidth="20dp"
+
+                            app:cpv_showTextInSpinningMode="true"
+                            app:cpv_showUnit="true"
+                            app:cpv_spin="true"
+                            app:cpv_startAngle="45"
+                            app:cpv_textMode="Percent"
+                            app:cpv_textSize="40dp"
+                            app:cpv_text_color="#FFFEFE"
+                            app:cpv_text_size="20" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--   column 2     -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_marginBottom="16sp"
+                    app:cardCornerRadius="18sp"
+                    app:cardElevation="18sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#4F11CA"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Sensor Two"
+                            android:textColor="#FAF7F7"
+                            android:textSize="20dp"
+                            android:textStyle="bold|italic"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Reading "
+                            android:textColor="#FDFDFD"
+                            android:textSize="14dp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <com.eralp.circleprogressview.CircleProgressView
+                            android:id="@+id/sensor_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="7"
+                            android:background="#9060E0"
+
+
+                            android:keepScreenOn="false"
+                            android:longClickable="false"
+
+                            android:textAlignment="center"
+                            app:cpv_autoTextColor="false"
+                            app:cpv_autoTextSize="false"
+                            app:cpv_background_circle_color="#5b253048"
+                            app:cpv_background_circle_width="30dp"
+                            app:cpv_barColor="#FFEB3B"
+
+                            app:cpv_barWidth="30dp"
+                            app:cpv_blockCount="10"
+                            app:cpv_circle_color="#FFEB3B"
+                            app:cpv_circle_width="20dp"
+                            app:cpv_fillColor="#8C59EB"
+                            app:cpv_rimColor="#DDDBDB"
+                            app:cpv_rimWidth="20dp"
+
+                            app:cpv_showTextInSpinningMode="true"
+                            app:cpv_showUnit="true"
+                            app:cpv_spin="true"
+                            app:cpv_startAngle="45"
+                            app:cpv_textMode="Percent"
+                            app:cpv_textSize="40dp"
+                            app:cpv_text_color="#FFFEFE"
+                            app:cpv_text_size="20" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--    row 2    -->
+
+                <!--   column 1     -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_marginBottom="16sp"
+                    app:cardCornerRadius="18sp"
+                    app:cardElevation="18sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#4F11CA"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Sensor Three"
+                            android:textColor="#FAF7F7"
+                            android:textSize="20dp"
+                            android:textStyle="bold|italic"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Reading "
+                            android:textColor="#FDFDFD"
+                            android:textSize="14dp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <com.eralp.circleprogressview.CircleProgressView
+                            android:id="@+id/sensor_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="7"
+                            android:background="#9060E0"
+
+
+                            android:keepScreenOn="false"
+                            android:longClickable="false"
+
+                            android:textAlignment="center"
+                            app:cpv_autoTextColor="false"
+                            app:cpv_autoTextSize="false"
+                            app:cpv_background_circle_color="#5b253048"
+                            app:cpv_background_circle_width="30dp"
+                            app:cpv_barColor="#FFEB3B"
+
+                            app:cpv_barWidth="30dp"
+                            app:cpv_blockCount="10"
+                            app:cpv_circle_color="#FFEB3B"
+                            app:cpv_circle_width="20dp"
+                            app:cpv_fillColor="#8C59EB"
+                            app:cpv_rimColor="#DDDBDB"
+                            app:cpv_rimWidth="20dp"
+
+                            app:cpv_showTextInSpinningMode="true"
+                            app:cpv_showUnit="true"
+                            app:cpv_spin="true"
+                            app:cpv_startAngle="45"
+                            app:cpv_textMode="Percent"
+                            app:cpv_textSize="40dp"
+                            app:cpv_text_color="#FFFEFE"
+                            app:cpv_text_size="20" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--   column 2     -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_marginBottom="16sp"
+                    app:cardCornerRadius="18sp"
+                    app:cardElevation="18sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#4F11CA"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Sensor Four"
+                            android:textColor="#FAF7F7"
+                            android:textSize="20dp"
+                            android:textStyle="bold|italic"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Reading "
+                            android:textColor="#FDFDFD"
+                            android:textSize="14dp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <com.eralp.circleprogressview.CircleProgressView
+                            android:id="@+id/sensor_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="7"
+                            android:background="#9060E0"
+
+
+                            android:keepScreenOn="false"
+                            android:longClickable="false"
+
+                            android:textAlignment="center"
+                            app:cpv_autoTextColor="false"
+                            app:cpv_autoTextSize="false"
+                            app:cpv_background_circle_color="#5b253048"
+                            app:cpv_background_circle_width="30dp"
+                            app:cpv_barColor="#FFEB3B"
+
+                            app:cpv_barWidth="30dp"
+                            app:cpv_blockCount="10"
+                            app:cpv_circle_color="#FFEB3B"
+                            app:cpv_circle_width="20dp"
+                            app:cpv_fillColor="#8C59EB"
+                            app:cpv_rimColor="#DDDBDB"
+                            app:cpv_rimWidth="20dp"
+
+                            app:cpv_showTextInSpinningMode="true"
+                            app:cpv_showUnit="true"
+                            app:cpv_spin="true"
+                            app:cpv_startAngle="45"
+                            app:cpv_textMode="Percent"
+                            app:cpv_textSize="40dp"
+                            app:cpv_text_color="#FFFEFE"
+                            app:cpv_text_size="20" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--    row 3    -->
+
+                <!--   column 1     -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_marginBottom="16sp"
+                    app:cardCornerRadius="18sp"
+                    app:cardElevation="18sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#4F11CA"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Sensor Five"
+                            android:textColor="#FAF7F7"
+                            android:textSize="20dp"
+                            android:textStyle="bold|italic"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Reading "
+                            android:textColor="#FDFDFD"
+                            android:textSize="14dp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <com.eralp.circleprogressview.CircleProgressView
+                            android:id="@+id/sensor_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="7"
+                            android:background="#9060E0"
+                            android:keepScreenOn="false"
+                            android:longClickable="false"
+                            android:textAlignment="center"
+                            app:cpv_autoTextColor="false"
+                            app:cpv_autoTextSize="false"
+                            app:cpv_background_circle_color="#5b253048"
+                            app:cpv_background_circle_width="30dp"
+                            app:cpv_barColor="#9DE6C7"
+                            app:cpv_barWidth="30dp"
+                            app:cpv_blockCount="10"
+                            app:cpv_circle_color="#B8FFF7"
+                            app:cpv_circle_width="20dp"
+                            app:cpv_fillColor="#8C59EB"
+                            app:cpv_rimColor="#DDDBDB"
+                            app:cpv_rimWidth="20dp"
+                            app:cpv_showTextInSpinningMode="true"
+                            app:cpv_showUnit="true"
+                            app:cpv_spin="true"
+                            app:cpv_startAngle="45"
+                            app:cpv_textMode="Percent"
+                            app:cpv_textSize="40dp"
+                            app:cpv_text_color="#FFFEFE"
+                            app:cpv_text_size="20" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+    <!-- old design
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginLeft="30sp"
+                    app:cardCornerRadius="12sp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_marginTop="30sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sensor One"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold|italic">
+                            </TextView>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height= "2dp"
+                                android:background="@android:color/white"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="5sp"
+                                android:layout_marginLeft="5sp"
+                                android:layout_marginRight="5sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/temSensor1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Temperature : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/ligSensor1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Liguid percentage : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginLeft="30sp"
+                    app:cardCornerRadius="12sp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_marginTop="30sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sensor Two"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold|italic">
+                            </TextView>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height= "2dp"
+                                android:background="@android:color/white"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="5sp"
+                                android:layout_marginLeft="7sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/temSensor2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Temperature : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/ligSensor2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Liguid percentage : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginLeft="30sp"
+                    app:cardCornerRadius="12sp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_marginTop="30sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sensor Three"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold|italic">
+                            </TextView>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height= "2dp"
+                                android:background="@android:color/white"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="5sp"
+                                android:layout_marginLeft="7sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/temSensor3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Temperature : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/ligSensor3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Liguid percentage : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginLeft="30sp"
+                    app:cardCornerRadius="12sp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_marginTop="30sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sensor Four"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold|italic">
+                            </TextView>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height= "2dp"
+                                android:background="@android:color/white"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="5sp"
+                                android:layout_marginLeft="7sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/temSensor4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Temperature : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/ligSensor4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Liguid percentage : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginLeft="30sp"
+                    app:cardCornerRadius="12sp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_marginTop="30sp"
+                            android:layout_marginLeft="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sensor Five"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold|italic">
+                            </TextView>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height= "2dp"
+                                android:background="@android:color/white"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="5sp"
+                                android:layout_marginLeft="7sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/temSensor5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Temperature : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/ligSensor5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Liguid percentage : 10"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+-->
+

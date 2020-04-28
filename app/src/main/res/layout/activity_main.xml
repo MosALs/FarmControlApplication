@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="8"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/farm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:src="@drawable/farmbg"></androidx.appcompat.widget.AppCompatImageView>
+
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/farm_image"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="123dp"
+            android:onClick="controlFarm"
+            android:text="Follow Your Farm Status"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"></Button>
+
+        <Button
+            android:id="@+id/fileActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="53dp"
+            android:onClick="controlFarm"
+            android:text="Go to File Activity"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"></Button>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
