@@ -34,10 +34,10 @@ public class FileDownload {
             @Override
             public void onSuccess(Uri uri) {
                 // to read from
-                File file = new File(Environment.getExternalStorageDirectory()+"/farm","test.txt");
+                File file = new File(Environment.getExternalStorageDirectory()+"/farm/download","test.txt");
 
                 // to write into.
-                File folder = new File(Environment.getExternalStorageDirectory()+"/farm");
+                File folder = new File(Environment.getExternalStorageDirectory()+"/farm/download");
                 // directory folder where file is doenloaded --> mobile internalStorage/farm.
 
                 boolean removed = false ;

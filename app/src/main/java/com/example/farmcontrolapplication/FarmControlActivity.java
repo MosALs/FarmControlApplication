@@ -72,7 +72,7 @@ public class FarmControlActivity extends AppCompatActivity implements View.OnCli
 //                progressDialog.setProgress(100);
 //                progressDialog.show();
 
-        File file = new File(Environment.getExternalStorageDirectory() + "/farm", "test.txt");
+        File file = new File(Environment.getExternalStorageDirectory() + "/farm/download", "test.txt");
         String sensorsReadings = FileDownload.readText(file);
         System.out.println("sensorsReadings: " + sensorsReadings);
 //            }
