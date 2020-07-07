@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button fileActivityBtn = findViewById(R.id.fileActivityBtn);
+//        Button fileActivityBtn = findViewById(R.id.fileActivityBtn);
 
-        fileActivityBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,FileUsageActivity.class));
-            }
-        });
+//        fileActivityBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this,FileUsageActivity.class));
+//            }
+//        });
 
         requestAppPermissions();
     }

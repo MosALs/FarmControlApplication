@@ -39,22 +39,22 @@
             android:textSize="25dp"
             android:textStyle="bold|italic"></Button>
 
-        <Button
-            android:id="@+id/fileActivityBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="58dp"
-            android:layout_marginEnd="63dp"
-            android:layout_marginBottom="53dp"
-            android:onClick="controlFarm"
-            android:text="Go to File Activity"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="25dp"
-            android:textStyle="bold|italic"></Button>
+<!--        <Button-->
+<!--            android:id="@+id/fileActivityBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="58dp"-->
+<!--            android:layout_marginEnd="63dp"-->
+<!--            android:layout_marginBottom="53dp"-->
+<!--            android:onClick="controlFarm"-->
+<!--            android:text="Go to File Activity"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="25dp"-->
+<!--            android:textStyle="bold|italic"></Button>-->
 
 
     </RelativeLayout>
