@@ -27,6 +27,7 @@ public class FarmControlActivity extends AppCompatActivity implements View.OnCli
 
     Button sectio1btn, sectio2btn, sectio3btn, sectio4btn, sectio5btn;
     boolean downloaded = false;
+    String sensorsReadings = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,23 +64,21 @@ public class FarmControlActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-//        final String[] sensorsReadings = {""};
 
-//        final ProgressDialog progressDialog = new ProgressDialog(FarmControlActivity.this);
-//        new CountDownTimer(4000, 1000) {
-//            public void onTick(long millisUntilFinished) {
-//                progressDialog.setTitle("Loading sensors data .... ");
-//                progressDialog.setProgress(100);
-//                progressDialog.show();
 
-        File file = new File(Environment.getExternalStorageDirectory() + "/farm/download", "test.txt");
-        String sensorsReadings = FileDownload.readText(file);
-        System.out.println("sensorsReadings: " + sensorsReadings);
-//            }
-//            public void onFinish() {
-//                progressDialog.dismiss();
-//            }
-//        }.start();
+        String smsData = getIntent().getStringExtra("sms_read");
+        if(smsData != null && smsData.equals("smsFile")){
+            File file = new File(Environment.getExternalStorageDirectory() + "/farm/sms", "test.txt");
+            sensorsReadings = FileDownload.readText(file);
+            System.out.println("sensorsReadings: " + sensorsReadings);
+        }
+
+        else{
+            File file = new File(Environment.getExternalStorageDirectory() + "/farm/download", "test.txt");
+            sensorsReadings = FileDownload.readText(file);
+            System.out.println("sensorsReadings: " + sensorsReadings);
+        }
+
 
         List<String> sectionOneSensorsReadings = getSectionOneSensorsReadings(sensorsReadings);
         List<String> sectionTwoSensorsReadings = getSectionTwoSensorsReadings(sensorsReadings);
@@ -118,56 +117,59 @@ public class FarmControlActivity extends AppCompatActivity implements View.OnCli
     }
 
 
-
     private List<String> getSectionOneSensorsReadings(String sensorsReadings) {
         List<String> sectionOneSensorsReadings = new ArrayList<>();
-        sectionOneSensorsReadings.add(sensorsReadings.substring(0,2));
-        sectionOneSensorsReadings.add(sensorsReadings.substring(3,5));
-        sectionOneSensorsReadings.add(sensorsReadings.substring(6,8));
-        sectionOneSensorsReadings.add(sensorsReadings.substring(9,11));
-        sectionOneSensorsReadings.add(sensorsReadings.substring(12,14));
+        sectionOneSensorsReadings.add(sensorsReadings.substring(0, 2));
+        sectionOneSensorsReadings.add(sensorsReadings.substring(3, 5));
+        sectionOneSensorsReadings.add(sensorsReadings.substring(6, 8));
+        sectionOneSensorsReadings.add(sensorsReadings.substring(9, 11));
+        sectionOneSensorsReadings.add(sensorsReadings.substring(12, 14));
 
-        return sectionOneSensorsReadings ;
+        return sectionOneSensorsReadings;
     }
+
     private List<String> getSectionTwoSensorsReadings(String sensorsReadings) {
         List<String> sectionTwoSensorsReadings = new ArrayList<>();
-        sectionTwoSensorsReadings.add(sensorsReadings.substring(15,17));
-        sectionTwoSensorsReadings.add(sensorsReadings.substring(18,20));
-        sectionTwoSensorsReadings.add(sensorsReadings.substring(21,23));
-        sectionTwoSensorsReadings.add(sensorsReadings.substring(24,26));
-        sectionTwoSensorsReadings.add(sensorsReadings.substring(27,29));
+        sectionTwoSensorsReadings.add(sensorsReadings.substring(15, 17));
+        sectionTwoSensorsReadings.add(sensorsReadings.substring(18, 20));
+        sectionTwoSensorsReadings.add(sensorsReadings.substring(21, 23));
+        sectionTwoSensorsReadings.add(sensorsReadings.substring(24, 26));
+        sectionTwoSensorsReadings.add(sensorsReadings.substring(27, 29));
 
-        return sectionTwoSensorsReadings ;
+        return sectionTwoSensorsReadings;
     }
+
     private List<String> getSectionThreeSensorsReadings(String sensorsReadings) {
         List<String> sectionThreeSensorsReadings = new ArrayList<>();
-        sectionThreeSensorsReadings.add(sensorsReadings.substring(30,32));
-        sectionThreeSensorsReadings.add(sensorsReadings.substring(33,35));
-        sectionThreeSensorsReadings.add(sensorsReadings.substring(36,38));
-        sectionThreeSensorsReadings.add(sensorsReadings.substring(39,41));
-        sectionThreeSensorsReadings.add(sensorsReadings.substring(42,44));
+        sectionThreeSensorsReadings.add(sensorsReadings.substring(30, 32));
+        sectionThreeSensorsReadings.add(sensorsReadings.substring(33, 35));
+        sectionThreeSensorsReadings.add(sensorsReadings.substring(36, 38));
+        sectionThreeSensorsReadings.add(sensorsReadings.substring(39, 41));
+        sectionThreeSensorsReadings.add(sensorsReadings.substring(42, 44));
 
         return sectionThreeSensorsReadings;
     }
+
     private List<String> getSectionFourSensorsReadings(String sensorsReadings) {
         List<String> sectionFourSensorsReadings = new ArrayList<>();
-        sectionFourSensorsReadings.add(sensorsReadings.substring(45,47));
-        sectionFourSensorsReadings.add(sensorsReadings.substring(48,50));
-        sectionFourSensorsReadings.add(sensorsReadings.substring(51,53));
-        sectionFourSensorsReadings.add(sensorsReadings.substring(54,56));
-        sectionFourSensorsReadings.add(sensorsReadings.substring(57,59));
+        sectionFourSensorsReadings.add(sensorsReadings.substring(45, 47));
+        sectionFourSensorsReadings.add(sensorsReadings.substring(48, 50));
+        sectionFourSensorsReadings.add(sensorsReadings.substring(51, 53));
+        sectionFourSensorsReadings.add(sensorsReadings.substring(54, 56));
+        sectionFourSensorsReadings.add(sensorsReadings.substring(57, 59));
 
-        return sectionFourSensorsReadings ;
+        return sectionFourSensorsReadings;
     }
+
     private List<String> getSectionFiveSensorsReadings(String sensorsReadings) {
         List<String> sectionFiveSensorsReadings = new ArrayList<>();
-        sectionFiveSensorsReadings.add(sensorsReadings.substring(60,62));
-        sectionFiveSensorsReadings.add(sensorsReadings.substring(63,65));
-        sectionFiveSensorsReadings.add(sensorsReadings.substring(66,68));
-        sectionFiveSensorsReadings.add(sensorsReadings.substring(69,71));
-        sectionFiveSensorsReadings.add(sensorsReadings.substring(72,74));
+        sectionFiveSensorsReadings.add(sensorsReadings.substring(60, 62));
+        sectionFiveSensorsReadings.add(sensorsReadings.substring(63, 65));
+        sectionFiveSensorsReadings.add(sensorsReadings.substring(66, 68));
+        sectionFiveSensorsReadings.add(sensorsReadings.substring(69, 71));
+        sectionFiveSensorsReadings.add(sensorsReadings.substring(72, 74));
 
-        return sectionFiveSensorsReadings ;
+        return sectionFiveSensorsReadings;
     }
 
 
@@ -185,7 +187,7 @@ public class FarmControlActivity extends AppCompatActivity implements View.OnCli
         }
 
         ActivityCompat.requestPermissions(this,
-                new String[] {
+                new String[]{
                         Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE
                 }, 3); // your request code
