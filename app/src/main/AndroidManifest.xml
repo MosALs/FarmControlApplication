@@ -5,8 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,15 @@
         android:roundIcon="@drawable/icon4"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FileUsageActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
+
+        <receiver android:name=".message.MySmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".FileUsageActivity" />
         <activity android:name=".FarmSectionStatus" />
         <activity android:name=".FarmControlActivity" />
         <activity android:name=".Splash">
