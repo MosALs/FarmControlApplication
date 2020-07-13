@@ -71,7 +71,7 @@ public class MySmsReceiver extends BroadcastReceiver {
 
                 if (msgs[i].getOriginatingAddress().equals("+201029803456")) {
 
-                    // this method creates file and put sensor readings from sms in it
+                    // this method creates file and pmut sensor readings from sms in it
                     createSMSFile(msgs[0].getMessageBody());
 
                     // save time of message in shared preferences.

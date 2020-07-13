@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 //        System.out.println(SR + " : " + time);
-        boolean timeCalculated = (System.currentTimeMillis() - time) >= 36000;
+        boolean timeCalculated = (System.currentTimeMillis() - time) > 36000;
         final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
         progressDialog.setTitle("Getting sensors readings .... ");
         progressDialog.show();
